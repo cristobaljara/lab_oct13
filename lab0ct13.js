@@ -33,4 +33,19 @@ var numbers = [];
 
 console.log(has23([2, 5]));
 console.log(has23([4, 3]));
-console.log(has23([4, 5]));  
+console.log(has23([4, 5])); 
+
+
+function fix23(a){
+  for (var i = 1; i < a.length; i++) {
+    if (a[i] === 3 && a[i-1] === 2) {
+      a[i] = 0;
+    }
+  }
+  return a;
+}
+
+console.log(fix23([1, 2, 3]));
+console.log(fix23([2, 3, 5]));
+console.log(fix23([1, 2, 1]));  
+
