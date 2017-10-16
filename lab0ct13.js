@@ -121,3 +121,128 @@ function front11(arr1,arr2) {
   console.log(front11([1, 2, 3], [7, 9, 8]));
   console.log(front11([1],[2]));
   console.log(front11([1, 7],[]));
+
+
+function isEverywhere(arr,b) {
+if (arr[0]==b){
+  
+    for (var i = 0; i < arr.length; i++) {
+    if (i%2==0 && arr[i]!==b) {
+        return false;
+      
+      }
+  }
+  
+  
+}
+  
+ if (arr[1]==b){
+  
+    for (var i = 0; i < arr.length; i++) {
+    if (i%2==1 && arr[i]!==b) {
+        return false;
+      
+      }
+  }
+  
+  
+} 
+  return true;
+
+
+}
+
+  console.log(isEverywhere([1, 2, 1, 3], 1)); 
+  console.log(isEverywhere([1, 2, 1, 3], 2));
+  console.log(isEverywhere([1, 2, 1, 3, 4], 1));
+  console.log(isEverywhere([1, 1, 1, 1], 1));
+  console.log(isEverywhere([3, 1, 8, 1], 1));
+
+  function tenRun(arr) {
+  var j = null
+  
+    for (var i = 0; i < arr.length; i++) {
+        
+        if(arr[i]%10==0){
+          
+         j=(arr[i]); 
+
+        }
+        else if (j != null){
+          
+          arr[i]= j;
+          
+        }      
+      }
+  
+  return arr;
+}
+
+  console.log(tenRun([2, 10, 3, 4, 20, 5])); 
+  console.log(tenRun([10, 1, 20, 2])); 
+  console.log(tenRun([10, 1, 9, 20])); 
+
+
+
+function shiftLeft(word){
+  return word.slice(1).concat(word[0])
+}
+
+console.log(shiftLeft([6, 2, 5, 3]));
+console.log(shiftLeft([1, 2]));
+console.log(shiftLeft([1])); 
+
+
+function evenOdd(arr){
+
+var a = [];
+var b = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i]%2==0) {
+
+      a.push(arr[i])
+
+    }
+
+    else{
+
+      b.push(arr[i])  
+    }
+
+  }
+
+  return a.concat(b);
+
+}
+
+console.log(evenOdd([1, 0, 1, 0, 0, 1, 1]) )
+console.log(evenOdd([3, 3, 2]) )
+console.log(evenOdd([2, 2, 2]) )
+
+
+function fizzBuzz(a,b){
+
+  var arr = []
+
+  for (var i = a; i < b; i++) {
+
+      if (i%3==0&&i%5==0) {
+
+        arr.push("FizzBuzz")
+      }else if (i%3==0) {
+        arr.push("Fizz")
+      }else if (i%5==0) {
+        arr.push("Buzz")
+      }else  {
+        arr.push(i)
+      }
+  }
+
+return arr;
+
+}
+
+console.log(fizzBuzz(1,6))
+console.log(fizzBuzz(1,8))
+console.log(fizzBuzz(1,11))x
